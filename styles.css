@@ -1,1 +1,65 @@
+body{
+  background-color: rgb(248, 222, 255);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0;
+}
+
+header{
+  background-color: #d999fc;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+h1{
+  font-size: 32px;
+  margin:0;
+}
+
+main{
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+p{
+  font-size: 20px;
+  color:rgba(78, 1, 114, 0.793);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+    color: #895ea8; 
+    font-weight: bold;
+}
+
+
+.imagens-lado-a-lado {
+    display: flex;
+    gap: 20px; /* Espaço entre as imagens */
+    justify-content: center; /* Centraliza as imagens na página */
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    margin: 20px 0;
+}
+
+/* Estilo padrão para imagens fora do layout lado a lado */
+img:not(.imagens-lado-a-lado img) {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  border: 3px solid #41045b;
+  border-radius: 10px;
+}
+
+
+footer{
+    background-color: #d999fc;
+  color: #d70c16;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
 
