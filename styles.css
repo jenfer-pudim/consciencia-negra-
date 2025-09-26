@@ -1,12 +1,12 @@
 body{
-  background-color: rgb(218, 139, 2);
+  background-color: #B25518;
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
 }
 
 header{
-  background-color: #9d4400;
+  background-color: #D3B578;
   color:white;
   padding:20px;
   text-align:center;
@@ -24,7 +24,7 @@ main{
 
 p{
   font-size: 20px;
-  color:rgba(158, 95, 18, 0.974);
+  color:#2E1206;
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -49,13 +49,13 @@ img:not(.imagens-lado-a-lado img) {
   display: block;
   margin: 20px auto;
   max-width: 100%;
-  border: 3px solid #eb6f03;
+  border: 3px solid #907D38;
   border-radius: 10px;
 }
 
 
 footer{
-    background-color: #f5b75b;
+    background-color: #CE8538;
   color: #d70c16;
   text-align: center;
   padding: 15px;
