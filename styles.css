@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(255, 191, 79);
+  background-color: rgb(218, 139, 2);
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
@@ -24,7 +24,7 @@ main{
 
 p{
   font-size: 20px;
-  color:rgba(255, 127, 42, 0.793);
+  color:rgba(158, 95, 18, 0.974);
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -55,7 +55,7 @@ img:not(.imagens-lado-a-lado img) {
 
 
 footer{
-    background-color: #9e6004;
+    background-color: #f5b75b;
   color: #d70c16;
   text-align: center;
   padding: 15px;
