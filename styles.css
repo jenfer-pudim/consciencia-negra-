@@ -1,65 +1,73 @@
-body{
+body {
   background-color: #fffba6;
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
 }
 
-header{
+header {
   background-color: #f7c053;
-  color:white;
-  padding:20px;
-  text-align:center;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-h1{
+h1 {
   font-size: 32px;
-  margin:0;
+  margin: 0;
 }
 
-main{
+main {
   margin: 30px auto;
   max-width: 800px;
 }
 
-p{
+p {
   font-size: 20px;
-  color:#2E1206;
+  color: #2E1206;
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
 h2 {
-    text-align: center;
-    color: #f8c557; 
-    font-weight: bold;
+  text-align: center;
+  color: #f8c557;
+  font-weight: bold;
 }
 
-
+/* Container para imagens lado a lado */
 .imagens-lado-a-lado {
-    display: flex;
-    gap: 20px; /* Espaço entre as imagens */
-    justify-content: center; /* Centraliza as imagens na página */
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
-    margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* permite quebra de linha em telas pequenas */
+  margin: 20px 0;
 }
 
-/* Estilo padrão para imagens fora do layout lado a lado */
-img:not(.imagens-lado-a-lado img) {
+/* Imagens dentro do container lado a lado */
+.imagens-lado-a-lado img {
+  width: 300px;
+  height: auto;
+  border: 3px solid #907D38;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Imagens fora do container lado a lado */
+main > img {
+  width: 300px;
+  height: auto;
   display: block;
   margin: 20px auto;
-  max-width: 100%;
   border: 3px solid #907D38;
   border-radius: 10px;
 }
 
-
-footer{
-    background-color: #fba740;
+footer {
+  background-color: #fba740;
   color: #d70c16;
   text-align: center;
   padding: 15px;
   margin-top: 40px;
   font-size: 14px;
 }
-
