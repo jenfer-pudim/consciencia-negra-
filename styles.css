@@ -71,3 +71,28 @@ footer {
   margin-top: 40px;
   font-size: 14px;
 }
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: #f7c053;
+  border-radius: 8px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.menu li a:hover {
+  background-color: #d9a53b;
+}
