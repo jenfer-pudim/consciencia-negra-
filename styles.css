@@ -1,12 +1,12 @@
 body{
-  background-color: #B25518;
+  background-color: #fffba6;
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
 }
 
 header{
-  background-color: #D3B578;
+  background-color: #f7c053;
   color:white;
   padding:20px;
   text-align:center;
@@ -55,7 +55,7 @@ img:not(.imagens-lado-a-lado img) {
 
 
 footer{
-    background-color: #CE8538;
+    background-color: #fba740;
   color: #d70c16;
   text-align: center;
   padding: 15px;
