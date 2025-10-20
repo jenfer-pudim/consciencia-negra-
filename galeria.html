@@ -1,67 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Galeria</title>
-  <style>
-    .imagens-lado-a-lado {
-      display: flex;
-      gap: 20px; /* espaço entre as imagens */
-      justify-content: center;
-      flex-wrap: wrap; /* para ficar responsivo e quebrar linha se necessário */
-      margin-top: 20px;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <link rel="stylesheet" href="styles.css" />
+    <title>Galeria</title>
+    
+    <style>
+      .imagens-lado-a-lado {
+        display: flex;
+        gap: 20px; /* Espaço entre as imagens */
+        justify-content: center;
+        flex-wrap: wrap; /* Quebra linha se precisar */
+        margin-top: 20px;
+      }
 
-    .item-imagem {
-      max-width: 200px;
-      text-align: center;
-    }
+      .item-imagem {
+        text-align: center;
+        max-width: 220px;
+      }
 
-    .item-imagem img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      display: block;
-    }
+      .item-imagem img {
+        width: 220px;  /* largura fixa */
+        height: 220px; /* altura fixa para manter mesmo tamanho */
+        object-fit: cover; /* corta imagem para preencher o espaço */
+        border-radius: 8px;
+        display: block;
+        margin: 0 auto;
+      }
 
-    .descricao {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #333;
-    }
-  </style>
+      .descricao {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #333;
+      }
+    </style>
 </head>
 <body>
+
   <header>
-    <h1>Bem-vindo à Galeria</h1>
-    <h2>Aqui você vai encontrar fotos e vídeos de símbolos negros brasileiros. Aproveite!!</h2>
+      <h1>Bem-vindo à Galeria</h1>
+      <h2>Aqui você vai encontrar fotos e vídeos de símbolos negros brasileiros. Aproveite!!</h2>
   </header>
 
   <main>
-    <h1>Aqui há alguns cantores de MPB, que você pode conhecer ou já conhece:</h1>
+      <h1>Aqui há alguns cantores de MPB, que você pode conhecer ou já conhece:</h1>
 
-    <div class="imagens-lado-a-lado" id="imagens">
-      <div class="item-imagem">
-        <img src="imagem/Tim Maia.jpeg" alt="Tim Maia" />
-        <div class="descricao">Tim Maia</div>
-      </div>
+      <div class="imagens-lado-a-lado" id="imagens">
+        <div class="item-imagem">
+          <img src="imagem/Tim Maia.jpeg" alt="Tim Maia" />
+          <div class="descricao">Tim Maia</div>
+        </div>
 
-      <div class="item-imagem">
-        <img src="imagem/Seu Jorge.jpeg" alt="Seu Jorge" />
-        <div class="descricao">Seu Jorge</div>
-      </div>
+        <div class="item-imagem">
+          <img src="imagem/Seu Jorge.jpeg" alt="Seu Jorge" />
+          <div class="descricao">Seu Jorge</div>
+        </div>
 
-      <div class="item-imagem">
-        <img src="imagem/Ben Jor.jpeg" alt="Ben Jor" />
-        <div class="descricao">Ben Jor</div>
-      </div>
+        <div class="item-imagem">
+          <img src="imagem/Ben Jor.jpeg" alt="Ben Jor" />
+          <div class="descricao">Ben Jor</div>
+        </div>
 
-      <div class="item-imagem">
-        <img src="imagem/Djavan.jpeg" alt="Djavan" />
-        <div class="descricao">Djavan</div>
+        <div class="item-imagem">
+          <img src="imagem/Djavan.jpeg" alt="Djavan" />
+          <div class="descricao">Djavan</div>
+        </div>
       </div>
-    </div>
   </main>
+
 </body>
 </html>
