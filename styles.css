@@ -96,3 +96,39 @@ footer {
 .menu li a:hover {
   background-color: #010101;
 }
+
+/* Ajuste no estilo das miniaturas para dispositivos móveis */
+@media (max-width: 720px) {
+  .galeria {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .imagem-principal {
+    width: 90vw;
+    height: 60vw;
+  }
+
+  .miniatura-lateral {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .btn-nav {
+    font-size: 1.8rem;
+    padding: 0 10px;
+  }
+}
+
+/* Adicionando transição de fade nas imagens */
+.imagem-principal img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Efeito suave ao passar o mouse sobre os botões de navegação */
+.btn-nav:hover {
+  background: rgba(0,0,0,0.7);
+  transition: background 0.2s ease;
+}
+
