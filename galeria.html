@@ -1,24 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-    <title>Galeria</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeria</title>
+  <style>
+    .imagens-lado-a-lado {
+      display: flex;
+      gap: 20px; /* espaço entre as imagens */
+      justify-content: center;
+      flex-wrap: wrap; /* para ficar responsivo e quebrar linha se necessário */
+      margin-top: 20px;
+    }
+
+    .item-imagem {
+      max-width: 200px;
+      text-align: center;
+    }
+
+    .item-imagem img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .descricao {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo á Galeria</h1>
-        <h2>Aqui você vai encontrar fotos e videos de simbolos negros brasileiros. Aproveite!!</h2>
-    </header>
-    
-    <main>
-        <h1>Aqui há alguns cantores de MPB, que você pode conhecer ou já conhece:</h1>
-        <img src="imagem/Tim Maia.jpeg" alt="">
-        <img src="imagem/Seu Jorge.jpeg" alt="">
-        <img src="imagem/Ben Jor.jpeg" alt="">
-        <img src="imagem/Djavan.jpeg" alt="">
-    </main>
-    
+  <header>
+    <h1>Bem-vindo à Galeria</h1>
+    <h2>Aqui você vai encontrar fotos e vídeos de símbolos negros brasileiros. Aproveite!!</h2>
+  </header>
+
+  <main>
+    <h1>Aqui há alguns cantores de MPB, que você pode conhecer ou já conhece:</h1>
+
+    <div class="imagens-lado-a-lado" id="imagens">
+      <div class="item-imagem">
+        <img src="imagem/Tim Maia.jpeg" alt="Tim Maia" />
+        <div class="descricao">Tim Maia</div>
+      </div>
+
+      <div class="item-imagem">
+        <img src="imagem/Seu Jorge.jpeg" alt="Seu Jorge" />
+        <div class="descricao">Seu Jorge</div>
+      </div>
+
+      <div class="item-imagem">
+        <img src="imagem/Ben Jor.jpeg" alt="Ben Jor" />
+        <div class="descricao">Ben Jor</div>
+      </div>
+
+      <div class="item-imagem">
+        <img src="imagem/Djavan.jpeg" alt="Djavan" />
+        <div class="descricao">Djavan</div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
