@@ -1,5 +1,5 @@
 body {
-  background-color: #fad09677;
+  background-color: #ffffff;
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
@@ -59,13 +59,13 @@ main > img {
   height: auto;
   display: block;
   margin: 20px auto;
-  border: 3px solid #bd3600;
+  border: 3px solid #ffe8b6;
   border-radius: 10px;
 }
 
 footer {
-  background-color: #fba740;
-  color: #d70c16;
+  background-color: #bfd77d98;
+  color: #57a3019d;
   text-align: center;
   padding: 15px;
   margin-top: 40px;
