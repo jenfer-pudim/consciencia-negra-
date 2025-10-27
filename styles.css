@@ -1,5 +1,5 @@
 body {
-  background-color: #ffffff;
+  background-color: #edfffec4;
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
@@ -48,7 +48,7 @@ h2 {
 .imagens-lado-a-lado img {
   width: 300px;
   height: auto;
-  border: 3px solid #f8fd9e9c;
+  border: 3px solid #ffe6849c;
   border-radius: 10px;
   display: block;
 }
