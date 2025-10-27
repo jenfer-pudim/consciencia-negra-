@@ -24,7 +24,7 @@ main {
 
 p {
   font-size: 20px;
-  color: #8f0000;
+  color: #ffd19d;
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -48,7 +48,7 @@ h2 {
 .imagens-lado-a-lado img {
   width: 300px;
   height: auto;
-  border: 3px solid #941102;
+  border: 3px solid #fdd29e;
   border-radius: 10px;
   display: block;
 }
@@ -94,7 +94,7 @@ footer {
 }
 
 .menu li a:hover {
-  background-color: #000000;
+  background-color: #57a3019d;
 }
 
 /* Ajuste no estilo das miniaturas para dispositivos móveis */
