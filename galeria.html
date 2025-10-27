@@ -143,20 +143,18 @@
   <h1>Aqui há alguns cantores de MPB, que você pode conhecer ou já conhece:</h1>
 
   <div class="galeria">
-    <!-- Miniatura anterior (lado esquerdo) -->
     <div class="miniatura-lateral" id="miniEsquerda" title="Imagem anterior">
       <img src="imagem/Djavan.jpg" alt="Imagem anterior" />
     </div>
 
-    <!-- Imagem principal -->
     <div class="imagem-principal">
       <button class="btn-nav btn-prev" aria-label="Imagem anterior">&#10094;</button>
       <img id="imagemGrande" src="imagem/Tim maia.jpg" alt="Tim Maia" />
       <button class="btn-nav btn-next" aria-label="Próxima imagem">&#10095;</button>
-      <div class="descricao-principal" id="descricaoGrande">Tim Maia</div>
     </div>
+    
+    <div class="descricao-principal" id="descricaoGrande">Tim Maia</div>
 
-    <!-- Miniatura próxima (lado direito) -->
     <div class="miniatura-lateral" id="miniDireita" title="Próxima imagem">
       <img src="imagem/" alt="Próxima imagem" />
     </div>
@@ -165,10 +163,10 @@
 
 <script>
   const imagens = [
-    { src: 'imagem/Tim Maia.jpeg', descricao: 'Tim Maia' },
-    { src: 'imagem/Seu Jorge.jpeg', descricao: 'Seu Jorge' },
-    { src: 'imagem/Ben Jor.jpeg', descricao: 'Ben Jor' },
-    { src: 'imagem/Djavan.jpeg', descricao: 'Djavan' },
+    { src: 'imagem/Tim maia.jpg', descricao: 'Tim Maia' },
+    { src: 'imagem/SeuJorgealta.jpeg', descricao: 'Seu Jorge' },
+    { src: 'imagem/jorge-ben-jor.jpg', descricao: 'Ben Jor' },
+    { src: 'imagem/Djavan.jpg', descricao: 'Djavan' },
   ];
 
   const imagemGrande = document.getElementById('imagemGrande');
