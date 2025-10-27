@@ -1,5 +1,5 @@
 body {
-  background-color: #fff6e6;
+  background-color: #E89C32;
   font-family: Arial, sans-serif;
   padding: 20px;
   margin: 0;
@@ -48,7 +48,7 @@ h2 {
 .imagens-lado-a-lado img {
   width: 300px;
   height: auto;
-  border: 3px solid #907D38;
+  border: 3px solid #B63C2E;
   border-radius: 10px;
   display: block;
 }
@@ -79,7 +79,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background-color: #f7c053;
+  background-color: #FFFFFF;
   border-radius: 8px;
 }
 
@@ -94,7 +94,7 @@ footer {
 }
 
 .menu li a:hover {
-  background-color: #010101;
+  background-color: #000000;
 }
 
 /* Ajuste no estilo das miniaturas para dispositivos móveis */
@@ -128,7 +128,7 @@ footer {
 
 /* Efeito suave ao passar o mouse sobre os botões de navegação */
 .btn-nav:hover {
-  background: rgba(0,0,0,0.7);
+  background: rgba(251, 184, 60, 0.7);
   transition: background 0.2s ease;
 }
 
