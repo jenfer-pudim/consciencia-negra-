@@ -128,7 +128,7 @@ footer {
 
 /* Efeito suave ao passar o mouse sobre os botões de navegação */
 .btn-nav:hover {
-  background: rgba(251, 184, 60, 0.7);
+  background: rgba(0, 142, 0, 0.64);
   transition: background 0.2s ease;
 }
 
