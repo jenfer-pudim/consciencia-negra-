@@ -29,6 +29,8 @@
       justify-content: center;
       gap: 30px;
       position: relative;
+      /* Novo: Permite que a descrição apareça bem abaixo no layout flexível */
+      flex-wrap: wrap; 
     }
 
     /* Imagem principal central */
@@ -40,6 +42,8 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      /* Para que a descrição principal não empurre os botões laterais no layout wrap */
+      order: 1; 
     }
     .imagem-principal img {
       width: 100%;
@@ -89,6 +93,11 @@
       justify-content: center;
       background: white;
       user-select: none;
+      /* Ordem visual */
+      order: 0;
+    }
+    #miniDireita {
+        order: 2;
     }
     .miniatura-lateral img {
       width: 100%;
@@ -103,12 +112,14 @@
 
     /* Descrição principal */
     .descricao-principal {
+      /* Ajuste para garantir que a descrição principal fique na linha de baixo, centralizada com a galeria */
       margin-top: 15px;
       font-size: 22px;
       font-weight: 600;
       color: #222;
       text-align: center;
-      width: 100%;
+      width: 100%; 
+      order: 3; /* Força a descrição a ser o último item no flex container */
     }
 
     /* Responsividade */
@@ -143,7 +154,7 @@
   <h1>Aqui há alguns cantores de MPB, que você pode conhecer ou já conhece:</h1>
 
   <div class="galeria">
-    <div class="miniatura-lateral" id="miniEsquerda" title="Imagem anterior">
+    <div class="miniatura-lateral" id="miniEsquerda">
       <img src="imagem/Djavan.jpg" alt="Imagem anterior" />
     </div>
 
@@ -155,7 +166,7 @@
     
     <div class="descricao-principal" id="descricaoGrande">Tim Maia</div>
 
-    <div class="miniatura-lateral" id="miniDireita" title="Próxima imagem">
+    <div class="miniatura-lateral" id="miniDireita">
       <img src="imagem/" alt="Próxima imagem" />
     </div>
   </div>
@@ -195,12 +206,12 @@
 
     // Atualiza miniaturas laterais
     miniEsquerda.querySelector('img').src = imagens[indiceEsquerda].src;
-    miniEsquerda.querySelector('img').alt = imagens[indiceEsquerda].descricao;
-    miniEsquerda.title = imagens[indiceEsquerda].descricao;
+    miniEsquerda.querySelector('img').alt = 'Imagem anterior'; // Mantém ALT genérico
+    // miniEsquerda.title = imagens[indiceEsquerda].descricao; <--- LINHA REMOVIDA
 
     miniDireita.querySelector('img').src = imagens[indiceDireita].src;
-    miniDireita.querySelector('img').alt = imagens[indiceDireita].descricao;
-    miniDireita.title = imagens[indiceDireita].descricao;
+    miniDireita.querySelector('img').alt = 'Próxima imagem'; // Mantém ALT genérico
+    // miniDireita.title = imagens[indiceDireita].descricao; <--- LINHA REMOVIDA
   }
 
   // Navegação
