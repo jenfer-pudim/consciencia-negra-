@@ -1,148 +1,237 @@
-body {
-  background-color: #edfffec4;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  margin: 0;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Galeria com imagem principal e miniaturas laterais</title>
 
-header {
-  background-color: #bfd77d98;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+      text-align: center;
+      margin: 0;
+    }
 
-h1 {
-  font-size: 32px;
-  margin: 0;
-}
+    header h1, header h2 {
+      margin: 0 0 10px;
+    }
 
-main {
-  margin: 30px auto;
-  max-width: 800px;
-}
+    main h1 {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
 
-p {
-  font-size: 20px;
-  color: #000;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
+    .galeria {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      position: relative;
+    }
 
-h2 {
-  text-align: center;
-  color: #57a3019d;
-  font-weight: bold;
-}
+    /* ===== Imagem principal ===== */
+    .imagem-principal {
+      position: relative;
+      flex-shrink: 0;
+      width: 500px;
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
 
-/* ===== MENU ===== */
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 15px 0;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  background-color: #fff;
-  border-radius: 8px;
-}
+    .imagem-principal img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.menu li a {
-  text-decoration: none;
-  color: rgba(1, 110, 219, 0.456);
-  font-weight: bold;
-  padding: 10px 15px;
-  display: block;
-  transition: background-color 0.3s ease;
-  border-radius: 5px;
-}
+    /* ===== Botões de navegação ===== */
+    .btn-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 2.5rem;
+      padding: 0 14px;
+      cursor: pointer;
+      border-radius: 50%;
+      user-select: none;
+      transition: background 0.3s ease;
+      z-index: 2;
+    }
 
-.menu li a:hover {
-  background-color: #4bf9969d;
-}
+    .btn-nav:hover {
+      background: rgba(0,0,0,0.8);
+    }
 
-/* ===== IMAGENS LADO A LADO ===== */
-.imagens-lado-a-lado {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin: 30px 0;
-  flex-wrap: wrap; /* quebra de linha em telas menores */
-}
+    .btn-prev {
+      left: 10px;
+    }
 
-.imagens-lado-a-lado img {
-  width: 500px; /* tamanho grande */
-  height: auto;
-  border: 3px solid #ffe6849c;
-  border-radius: 10px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
+    .btn-next {
+      right: 10px;
+    }
 
-.imagens-lado-a-lado img:hover {
-  transform: scale(1.05);
-}
+    /* ===== Miniaturas laterais ===== */
+    .miniatura-lateral {
+      flex-shrink: 0;
+      width: 140px;
+      height: 140px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      user-select: none;
+    }
 
-/* ===== IMAGENS FORA DO CONTAINER ===== */
-main > img {
-  width: 500px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border: 3px solid #b6ccff;
-  border-radius: 10px;
-}
+    .miniatura-lateral img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-/* ===== FOOTER ===== */
-footer {
-  background-color: #bfd77d98;
-  color: #57a3019d;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 14px;
-}
+    .miniatura-lateral:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+    }
 
-/* ===== GALERIA E NAVEGAÇÃO ===== */
-.imagem-principal img {
-  transition: opacity 0.5s ease-in-out;
-}
+    /* ===== Descrição ===== */
+    .descricao-principal {
+      margin-top: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #222;
+      text-align: center;
+      width: 100%;
+    }
 
-.btn-nav:hover {
-  background: rgba(0, 142, 0, 0.64);
-  transition: background 0.2s ease;
-}
+    /* ===== Bloquear seleção e arrasto ===== */
+    img {
+      user-select: none;       /* impede seleção */
+      -webkit-user-drag: none; /* impede arrastar */
+    }
 
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
-  .imagens-lado-a-lado {
-    flex-direction: column;
-    gap: 20px;
-  }
+    /* ===== Responsividade ===== */
+    @media (max-width: 720px) {
+      .galeria {
+        flex-direction: column;
+        gap: 15px;
+      }
 
-  .imagens-lado-a-lado img {
-    width: 90%;
-  }
+      .imagem-principal {
+        width: 90vw;
+        height: 60vw;
+      }
 
-  .galeria {
-    flex-direction: column;
-    gap: 15px;
-  }
+      .miniatura-lateral {
+        width: 100px;
+        height: 100px;
+      }
 
-  .imagem-principal {
-    width: 90vw;
-    height: 60vw;
-  }
+      .btn-nav {
+        font-size: 1.8rem;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
 
-  .miniatura-lateral {
-    width: 100px;
-    height: 100px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
+<body>
+  <header>
+    <h1>Bem-vindo à Galeria</h1>
+    <h2>Aqui você vai encontrar fotos e vídeos de símbolos negros brasileiros. Aproveite!</h2>
+  </header>
 
-  .btn-nav {
-    font-size: 1.8rem;
-    padding: 0 10px;
-  }
-}
+  <main>
+    <h1>Aqui há alguns cantores de MPB, que você pode conhecer ou já conhece:</h1>
+
+    <div class="galeria">
+      <!-- Miniatura anterior -->
+      <div class="miniatura-lateral" id="miniEsquerda" title="Imagem anterior">
+        <img src="imagem/Djavan.jpg" alt="Imagem anterior" />
+      </div>
+
+      <!-- Imagem principal -->
+      <div class="imagem-principal">
+        <button class="btn-nav btn-prev" aria-label="Imagem anterior">&#10094;</button>
+        <img id="imagemGrande" src="imagem/Tim maia.jpg" alt="Tim Maia" />
+        <button class="btn-nav btn-next" aria-label="Próxima imagem">&#10095;</button>
+        <div class="descricao-principal" id="descricaoGrande">Tim Maia</div>
+      </div>
+
+      <!-- Miniatura próxima -->
+      <div class="miniatura-lateral" id="miniDireita" title="Próxima imagem">
+        <img src="imagem/SeuJorgealta.jpeg" alt="Próxima imagem" />
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const imagens = [
+      { src: 'imagem/Tim maia.jpg', descricao: 'Tim Maia' },
+      { src: 'imagem/SeuJorgealta.jpeg', descricao: 'Seu Jorge' },
+      { src: 'imagem/jorge-ben-jor.jpg', descricao: 'Jorge Ben Jor' },
+      { src: 'imagem/Djavan.jpg', descricao: 'Djavan' }
+    ];
+
+    const imagemGrande = document.getElementById('imagemGrande');
+    const descricaoGrande = document.getElementById('descricaoGrande');
+    const btnPrev = document.querySelector('.btn-prev');
+    const btnNext = document.querySelector('.btn-next');
+    const miniEsquerda = document.getElementById('miniEsquerda');
+    const miniDireita = document.getElementById('miniDireita');
+
+    let indexAtual = 0;
+
+    function atualizarGaleria(novoIndex) {
+      if (novoIndex < 0) novoIndex = imagens.length - 1;
+      if (novoIndex >= imagens.length) novoIndex = 0;
+      indexAtual = novoIndex;
+
+      imagemGrande.src = imagens[indexAtual].src;
+      imagemGrande.alt = imagens[indexAtual].descricao;
+      descricaoGrande.textContent = imagens[indexAtual].descricao;
+
+      const indiceEsquerda = (indexAtual - 1 + imagens.length) % imagens.length;
+      const indiceDireita = (indexAtual + 1) % imagens.length;
+
+      miniEsquerda.querySelector('img').src = imagens[indiceEsquerda].src;
+      miniEsquerda.querySelector('img').alt = imagens[indiceEsquerda].descricao;
+      miniEsquerda.title = imagens[indiceEsquerda].descricao;
+
+      miniDireita.querySelector('img').src = imagens[indiceDireita].src;
+      miniDireita.querySelector('img').alt = imagens[indiceDireita].descricao;
+      miniDireita.title = imagens[indiceDireita].descricao;
+    }
+
+    btnPrev.addEventListener('click', () => atualizarGaleria(indexAtual - 1));
+    btnNext.addEventListener('click', () => atualizarGaleria(indexAtual + 1));
+    miniEsquerda.addEventListener('click', () => atualizarGaleria(indexAtual - 1));
+    miniDireita.addEventListener('click', () => atualizarGaleria(indexAtual + 1));
+
+    atualizarGaleria(indexAtual);
+  </script>
+
+  <script>
+    // Bloqueia o botão direito em imagens
+    document.addEventListener('contextmenu', e => {
+      if (e.target.tagName === 'IMG') e.preventDefault();
+    });
+  </script>
+</body>
+</html>
