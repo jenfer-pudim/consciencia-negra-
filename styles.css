@@ -24,7 +24,7 @@ main {
 
 p {
   font-size: 20px;
-  color: #000000;
+  color: #000;
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -35,43 +35,7 @@ h2 {
   font-weight: bold;
 }
 
-/* Container para imagens lado a lado */
-.imagens-lado-a-lado {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap; /* permite quebra de linha em telas pequenas */
-  margin: 20px 0;
-}
-
-/* Imagens dentro do container lado a lado */
-.imagens-lado-a-lado img {
-  width: 300px;
-  height: auto;
-  border: 3px solid #ffe6849c;
-  border-radius: 10px;
-  display: block;
-}
-
-/* Imagens fora do container lado a lado */
-main > img {
-  width: 300px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  border: 3px solid #b6ccff;
-  border-radius: 10px;
-}
-
-footer {
-  background-color: #bfd77d98;
-  color: #57a3019d;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 14px;
-}
-
+/* ===== MENU ===== */
 .menu {
   list-style: none;
   padding: 0;
@@ -79,7 +43,7 @@ footer {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background-color: #FFFFFF;
+  background-color: #fff;
   border-radius: 8px;
 }
 
@@ -97,8 +61,70 @@ footer {
   background-color: #4bf9969d;
 }
 
-/* Ajuste no estilo das miniaturas para dispositivos móveis */
-@media (max-width: 720px) {
+/* ===== IMAGENS LADO A LADO ===== */
+.imagens-lado-a-lado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap; /* quebra de linha em telas menores */
+}
+
+.imagens-lado-a-lado img {
+  width: 500px; /* tamanho grande */
+  height: auto;
+  border: 3px solid #ffe6849c;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.imagens-lado-a-lado img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== IMAGENS FORA DO CONTAINER ===== */
+main > img {
+  width: 500px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #b6ccff;
+  border-radius: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #bfd77d98;
+  color: #57a3019d;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* ===== GALERIA E NAVEGAÇÃO ===== */
+.imagem-principal img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.btn-nav:hover {
+  background: rgba(0, 142, 0, 0.64);
+  transition: background 0.2s ease;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .imagens-lado-a-lado {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .imagens-lado-a-lado img {
+    width: 90%;
+  }
+
   .galeria {
     flex-direction: column;
     gap: 15px;
@@ -118,48 +144,5 @@ footer {
   .btn-nav {
     font-size: 1.8rem;
     padding: 0 10px;
-  }
-}
-
-/* Adicionando transição de fade nas imagens */
-.imagem-principal img {
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* Efeito suave ao passar o mouse sobre os botões de navegação */
-.btn-nav:hover {
-  background: rgba(0, 142, 0, 0.64);
-  transition: background 0.2s ease;
-}
-
-/* Faz as imagens ficarem maiores e lado a lado */
-.imagens-lado-a-lado {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px; /* espaço entre as imagens */
-  margin: 30px 0;
-}
-
-.imagens-lado-a-lado img {
-  width: 500px;    /* AUMENTE este valor conforme quiser (ex: 600px, 700px...) */
-  height: auto;    /* mantém a proporção original da imagem */
-  border-radius: 10px; /* deixa as bordas arredondadas */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3); /* adiciona sombra suave */
-  transition: transform 0.3s ease;
-}
-
-.imagens-lado-a-lado img:hover {
-  transform: scale(1.05); /* aumenta levemente ao passar o mouse */
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-  .imagens-lado-a-lado {
-    flex-direction: column;
-  }
-
-  .imagens-lado-a-lado img {
-    width: 90%; /* ajusta automaticamente em celulares */
   }
 }
