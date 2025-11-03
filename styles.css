@@ -72,13 +72,15 @@ h2 {
 }
 
 .imagens-lado-a-lado img {
-  width: 500px; /* tamanho grande */
-  height: auto;
+  width: 500px;     /* largura fixa */
+  height: 350px;    /* altura fixa — você pode ajustar (ex: 400px) */
+  object-fit: cover; /* corta e centraliza para manter proporção */
   border: 3px solid #ffe6849c;
   border-radius: 10px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
+
 
 .imagens-lado-a-lado img:hover {
   transform: scale(1.05);
