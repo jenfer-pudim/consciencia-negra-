@@ -2,9 +2,10 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <link rel="stylesheet" href="styles.css" />
-  <title>Galeria com imagem principal e miniaturas laterais</title>
+  <title>Galeria com vídeos e textos</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,6 +13,7 @@
       background: #f5f5f5;
       text-align: center;
     }
+
     header h1, header h2 {
       margin: 0 0 10px;
     }
@@ -20,6 +22,53 @@
       margin-top: 30px;
       margin-bottom: 20px;
     }
+
+    /* ======== CARD ======== */
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      width: 520px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    .card-texto {
+      margin-top: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .card-descricao {
+      margin: 10px 20px;
+      font-size: 16px;
+      color: #444;
+      line-height: 1.4;
+    }
+
+    .card iframe {
+      width: 90%;
+      height: 250px;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* ======================= */
 
     .galeria {
       max-width: 900px;
@@ -31,29 +80,11 @@
       position: relative;
     }
 
-    /* Imagem principal central */
-    .imagem-principal {
-      position: relative;
-      flex-shrink: 0;
-      width: 500px;
-      height: 400px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    }
-    .imagem-principal img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Botões next/prev sobre a imagem principal */
     .btn-nav {
       position: absolute;
-      top: 50%;
+      top: 45%;
       transform: translateY(-50%);
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       color: white;
       border: none;
       font-size: 2.5rem;
@@ -64,24 +95,21 @@
       transition: background 0.3s ease;
       z-index: 2;
     }
+
     .btn-nav:hover {
-      background: rgba(0,0,0,0.8);
-    }
-    .btn-prev {
-      left: 10px;
-    }
-    .btn-next {
-      right: 10px;
+      background: rgba(0, 0, 0, 0.8);
     }
 
-    /* Container das miniaturas laterais */
+    .btn-prev { left: -50px; }
+    .btn-next { right: -50px; }
+
     .miniatura-lateral {
       flex-shrink: 0;
       width: 140px;
       height: 140px;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       display: flex;
@@ -90,40 +118,29 @@
       background: white;
       user-select: none;
     }
+
     .miniatura-lateral img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
+
     .miniatura-lateral:hover {
       transform: scale(1.05);
       box-shadow: 0 6px 14px rgba(0,0,0,0.4);
     }
 
-    /* Descrição principal */
-    .descricao-principal {
-      margin-top: 15px;
-      font-size: 22px;
-      font-weight: 600;
-      color: #222;
-      text-align: center;
-      width: 100%;
-    }
-
-    /* Responsividade */
     @media(max-width: 720px) {
       .galeria {
         flex-direction: column;
         gap: 15px;
       }
-      .imagem-principal {
+      .card {
         width: 90vw;
-        height: 60vw;
       }
-      .miniatura-lateral {
-        width: 100px;
-        height: 100px;
+      .card img {
+        height: 60vw;
       }
       .btn-nav {
         font-size: 1.8rem;
@@ -132,98 +149,125 @@
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="historia.html">História</a></li>
+        <li><a href="index.html">Consciência Negra</a></li>
+        <li><a href="index.html">Legado</a></li>
+        <li><a href="galeria.html">Galeria</a></li>   
+      </ul>
+    </nav>
+    <h1>Consciência Negra</h1>
+    <h2>Aqui você vai encontrar fotos, textos e vídeos de símbolos negros brasileiros. Aproveite!</h2>
+  </header>
 
-<header>
-  <h1>Bem-vindo à Galeria</h1>
-  <h2>Aqui você vai encontrar fotos e vídeos de símbolos negros brasileiros. Aproveite!!</h2>
-</header>
+  <main>
+    <h2>Cantores de MPB que marcaram a história:</h2>
 
-<main>
-  <h1>Aqui há alguns cantores de MPB, que você pode conhecer ou já conhece:</h1>
+    <div class="galeria">
+      <div class="miniatura-lateral" id="miniEsquerda" title="Imagem anterior">
+        <img src="imagem/Djavan.jpg" alt="Imagem anterior" />
+      </div>
 
-  <div class="galeria">
-    <!-- Miniatura anterior (lado esquerdo) -->
-    <div class="miniatura-lateral" id="miniEsquerda" title="Imagem anterior">
-      <img src="imagem/Djavan.jpg" alt="Imagem anterior" />
+      <!-- CARD PRINCIPAL -->
+      <div class="card">
+        <button class="btn-nav btn-prev" aria-label="Imagem anterior">&#10094;</button>
+
+        <img id="imagemGrande" src="imagem/Tim maia.jpg" alt="Tim Maia" />
+
+        <div class="card-texto" id="descricaoGrande">Tim Maia</div>
+        <div class="card-descricao" id="textoGrande">
+          Tim Maia foi um dos maiores nomes da música popular brasileira, conhecido por sua voz marcante e estilo inconfundível.
+        </div>
+
+        <!-- vídeo -->
+        <div id="videoContainer">
+          <iframe id="videoGrande" width="560" height="315"
+            src="https://www.youtube.com/embed/FM2tZnIPZUk"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <button class="btn-nav btn-next" aria-label="Próxima imagem">&#10095;</button>
+      </div>
+
+      <div class="miniatura-lateral" id="miniDireita" title="Próxima imagem">
+        <img src="imagem/SeuJorgealta.jpeg" alt="Próxima imagem" />
+      </div>
     </div>
+  </main>
 
-    <!-- Imagem principal -->
-    <div class="imagem-principal">
-      <button class="btn-nav btn-prev" aria-label="Imagem anterior">&#10094;</button>
-      <img id="imagemGrande" src="imagem/Tim maia.jpg" alt="Tim Maia" />
-      <button class="btn-nav btn-next" aria-label="Próxima imagem">&#10095;</button>
-      <div class="descricao-principal" id="descricaoGrande">Tim Maia</div>
-    </div>
+  <script>
+    const imagens = [
+      {
+        src: 'imagem/Tim maia.jpg',
+        descricao: 'Tim Maia',
+        texto: 'Tim Maia foi um dos maiores nomes da música popular brasileira, conhecido por sua voz marcante e estilo inconfundível.',
+        video: 'https://www.youtube.com/embed/FM2tZnIPZUk'
+      },
+      {
+        src: 'imagem/SeuJorgealta.jpeg',
+        descricao: 'Seu Jorge',
+        texto: 'Seu Jorge é cantor e compositor brasileiro, reconhecido por seu talento e representatividade na música e no cinema.',
+        video: 'https://www.youtube.com/embed/X91u7P7yY7I'
+      },
+      {
+        src: 'imagem/jorge-ben-jor.jpg',
+        descricao: 'Jorge Ben Jor',
+        texto: 'Jorge Ben Jor revolucionou a MPB misturando samba, rock e funk com letras criativas e ritmo contagiante.',
+        video: 'https://www.youtube.com/embed/2K9V1F7XwDg'
+      },
+      {
+        src: 'imagem/Djavan.jpg',
+        descricao: 'Djavan',
+        texto: 'Djavan é conhecido por suas composições poéticas e seu estilo único que une jazz, samba e pop brasileiro.',
+        video: 'https://www.youtube.com/embed/4O0zYvT_H0w'
+      },
+    ];
 
-    <!-- Miniatura próxima (lado direito) -->
-    <div class="miniatura-lateral" id="miniDireita" title="Próxima imagem">
-      <img src="imagem/" alt="Próxima imagem" />
-    </div>
-  </div>
-</main>
+    const imagemGrande = document.getElementById('imagemGrande');
+    const descricaoGrande = document.getElementById('descricaoGrande');
+    const textoGrande = document.getElementById('textoGrande');
+    const videoGrande = document.getElementById('videoGrande');
+    const btnPrev = document.querySelector('.btn-prev');
+    const btnNext = document.querySelector('.btn-next');
+    const miniEsquerda = document.getElementById('miniEsquerda');
+    const miniDireita = document.getElementById('miniDireita');
 
-<script>
-  const imagens = [
-    { src: 'imagem/Tim maia.jpg', descricao: 'Tim Maia' },
-    { src: 'imagem/SeuJorgealta.jpeg', descricao: 'Seu Jorge' },
-    { src: 'imagem/jorge-ben-jor.jpg', descricao: 'Ben Jor' },
-    { src: 'imagem/Djavan.jpg', descricao: 'Djavan' },
-  ];
+    let indexAtual = 0;
 
-  const imagemGrande = document.getElementById('imagemGrande');
-  const descricaoGrande = document.getElementById('descricaoGrande');
-  const btnPrev = document.querySelector('.btn-prev');
-  const btnNext = document.querySelector('.btn-next');
-  const miniEsquerda = document.getElementById('miniEsquerda');
-  const miniDireita = document.getElementById('miniDireita');
+    function atualizarGaleria(novoIndex) {
+      if (novoIndex < 0) novoIndex = imagens.length - 1;
+      if (novoIndex >= imagens.length) novoIndex = 0;
 
-  let indexAtual = 0;
+      indexAtual = novoIndex;
 
-  function atualizarGaleria(novoIndex) {
-    if (novoIndex < 0) novoIndex = imagens.length - 1;
-    if (novoIndex >= imagens.length) novoIndex = 0;
+      imagemGrande.src = imagens[indexAtual].src;
+      descricaoGrande.textContent = imagens[indexAtual].descricao;
+      textoGrande.textContent = imagens[indexAtual].texto;
+      videoGrande.src = imagens[indexAtual].video;
 
-    indexAtual = novoIndex;
+      const indiceEsquerda = (indexAtual - 1 + imagens.length) % imagens.length;
+      const indiceDireita = (indexAtual + 1) % imagens.length;
 
-    // Atualiza a imagem grande e descrição
-    imagemGrande.src = imagens[indexAtual].src;
-    imagemGrande.alt = imagens[indexAtual].descricao;
-    descricaoGrande.textContent = imagens[indexAtual].descricao;
+      miniEsquerda.querySelector('img').src = imagens[indiceEsquerda].src;
+      miniDireita.querySelector('img').src = imagens[indiceDireita].src;
 
-    // Define indices das miniaturas laterais
-    const indiceEsquerda = (indexAtual - 1 + imagens.length) % imagens.length;
-    const indiceDireita = (indexAtual + 1) % imagens.length;
+      miniEsquerda.title = imagens[indiceEsquerda].descricao;
+      miniDireita.title = imagens[indiceDireita].descricao;
+    }
 
-    // Atualiza miniaturas laterais
-    miniEsquerda.querySelector('img').src = imagens[indiceEsquerda].src;
-    miniEsquerda.querySelector('img').alt = imagens[indiceEsquerda].descricao;
-    miniEsquerda.title = imagens[indiceEsquerda].descricao;
+    btnPrev.addEventListener('click', () => atualizarGaleria(indexAtual - 1));
+    btnNext.addEventListener('click', () => atualizarGaleria(indexAtual + 1));
+    miniEsquerda.addEventListener('click', () => atualizarGaleria(indexAtual - 1));
+    miniDireita.addEventListener('click', () => atualizarGaleria(indexAtual + 1));
 
-    miniDireita.querySelector('img').src = imagens[indiceDireita].src;
-    miniDireita.querySelector('img').alt = imagens[indiceDireita].descricao;
-    miniDireita.title = imagens[indiceDireita].descricao;
-  }
-
-  // Navegação
-  btnPrev.addEventListener('click', () => {
-    atualizarGaleria(indexAtual - 1);
-  });
-  btnNext.addEventListener('click', () => {
-    atualizarGaleria(indexAtual + 1);
-  });
-
-  // Clique nas miniaturas laterais também troca a imagem principal
-  miniEsquerda.addEventListener('click', () => {
-    atualizarGaleria(indexAtual - 1);
-  });
-  miniDireita.addEventListener('click', () => {
-    atualizarGaleria(indexAtual + 1);
-  });
-
-  // Inicializa galeria
-  atualizarGaleria(indexAtual);
-</script>
-
+    atualizarGaleria(indexAtual);
+  </script>
 </body>
 </html>
