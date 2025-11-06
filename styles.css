@@ -1,24 +1,24 @@
 /* ========================== 
-   🌸 Estilo geral da página
+   🌍 Estilo geral da página (paleta Space)
 =========================== */
 body {
-  background-color: #feeaf0;
+  background-color: #ffffff; /* tan - bege */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
   text-align: center;
-  color: #222;
+  color: #1d0000; /* space cadet - azul escuro */
 }
 
 /* ==========================
-   🌸 Cabeçalho fixo
+   🌍 Cabeçalho fixo
 =========================== */
 header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background: #5e23078e;
+  background: #b6885d; /* coffee semitransparente */
   color: #fff;
   padding: 20px 0;
   text-align: center;
@@ -28,7 +28,7 @@ header {
 
 header.scrolled {
   padding: 5px 0;
-  background: #d33a3a;
+  background: #5c5956; /* caput mortuum */
 }
 
 header.hidden {
@@ -44,11 +44,11 @@ header h2 {
   margin: 5px 0 0;
   font-weight: normal;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.85);
+  color: #5c3401d9; /* tan suave */
 }
 
 /* ==========================
-   🌸 Menu de navegação
+   🌍 Menu de navegação
 =========================== */
 nav {
   display: flex;
@@ -63,14 +63,14 @@ nav {
   gap: 25px;
   margin: 0;
   padding: 0;
-  background-color: #edc3abb3;
+  background-color: #e0c4a0; /* slate gray semitransparente */
   border-radius: 8px;
 }
 
 .menu a {
   text-decoration: none;
   font-weight: bold;
-  color: #7e1f1f;
+  color: #452815; /* space cadet */
   padding: 10px 15px;
   display: block;
   border-radius: 5px;
@@ -78,16 +78,16 @@ nav {
 }
 
 .menu a:hover {
-  background-color: #8d6b6b;
-  color: #e9d8d0;
+  background-color: #73411f; /* caput mortuum */
+  color: #e0c4a0; /* tan */
   transform: scale(1.1);
 }
 
 /* ==========================
-   🌸 Conteúdo principal
+   🌍 Conteúdo principal
 =========================== */
 main {
-  margin-top: 120px; /* evita sobreposição com header */
+  margin-top: 120px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
@@ -95,23 +95,24 @@ main {
 
 main h1 {
   margin: 30px 0 20px;
+  color: #6F4D38; /* coffee */
 }
 
 p {
   font-size: 20px;
-  color: #51441b;
+  color: #734116; /* space cadet */
   line-height: 1.6;
   margin-bottom: 15px;
 }
 
 h2 {
   text-align: center;
-  color: #454d17aa;
+  color: #b85d08c8; /* slate gray */
   font-weight: bold;
 }
 
 /* ==========================
-   🌸 Galeria de imagens e vídeos
+   🌍 Galeria de imagens e vídeos
 =========================== */
 .galeria {
   display: flex;
@@ -126,9 +127,9 @@ h2 {
 
 /* ======== Card principal ======== */
 .card {
-  background: #fff;
+  background: #D5B893; /* tan */
   border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 15px rgba(111, 77, 56, 0.3); /* sombra coffee */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -143,6 +144,7 @@ h2 {
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  border-bottom: 5px solid #6F4D38; /* coffee */
 }
 
 .card-texto {
@@ -150,14 +152,14 @@ h2 {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  color: #7e1f1f;
+  color: #b41a24; /* caput mortuum */
 }
 
 .card-descricao {
   margin: 10px 20px;
   font-size: 18px;
   text-align: center;
-  color: #51441b;
+  color: #25344F; /* space cadet */
   line-height: 1.4;
 }
 
@@ -167,7 +169,7 @@ h2 {
   height: 250px;
   border-radius: 10px;
   margin-top: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(111, 77, 56, 0.3);
 }
 
 /* ======== Miniaturas laterais ======== */
@@ -177,13 +179,13 @@ h2 {
   height: 140px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(114, 69, 69, 0.2);
+  box-shadow: 0 4px 10px rgba(111, 77, 56, 0.3);
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #060000;
+  background: #000000; /* slate gray */
   user-select: none;
 }
 
@@ -195,7 +197,7 @@ h2 {
 
 .miniatura-lateral:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(154, 41, 41, 0.52);
+  box-shadow: 0 6px 14px rgba(99, 32, 36, 0.6); /* caput mortuum */
 }
 
 /* ======== Botões de navegação ======== */
@@ -203,8 +205,8 @@ h2 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
+  background: rgba(111, 77, 56, 0.5); /* coffee semitransparente */
+  color: #632024;
   border: none;
   font-size: 2.5rem;
   padding: 0 14px;
@@ -216,14 +218,14 @@ h2 {
 }
 
 .btn-nav:hover {
-  background: rgba(0,0,0,0.64);
+  background: rgba(111, 77, 56, 0.8);
 }
 
 .btn-prev { left: 10px; }
 .btn-next { right: 10px; }
 
 /* ==========================
-   🌸 Responsividade
+   🌍 Responsividade
 =========================== */
 @media(max-width: 720px) {
   .galeria {
@@ -251,11 +253,11 @@ h2 {
 }
 
 /* ==========================
-   🌸 Rodapé
+   🌍 Rodapé
 =========================== */
 footer {
-  background-color: #290d0d98;
-  color: rgba(255, 255, 255, 0.6);
+  background-color: #e8d2b8; /* space cadet */
+  color: rgba(213, 184, 147, 0.8); /* tan suave */
   text-align: center;
   padding: 15px;
   margin-top: 40px;
@@ -263,7 +265,7 @@ footer {
 }
 
 /* ==========================
-   🌸 Imagens gerais
+   🌍 Imagens gerais
 =========================== */
 .imagens-lado-a-lado {
   display: flex;
@@ -282,10 +284,10 @@ main > img {
 }
 
 .imagens-lado-a-lado img {
-  border: 3px solid #825604ce;
+  border: 3px solid #D5B893; /* tan */
 }
 
 main > img {
-  border: 3px solid #7b4b4b;
+  border: 3px solid #632024; /* caput mortuum */
   margin: 20px auto;
 }
