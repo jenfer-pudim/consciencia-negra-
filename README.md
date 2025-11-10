@@ -4,27 +4,27 @@ Bem-vindo ao repositório do projeto Consciência Negra! Este site reúne conte�
 
 🎯 Visão Geral
 
-O objetivo deste projeto é criar uma plataforma web pública que:
+ºO objetivo deste projeto é criar uma plataforma web pública que:
 
-destaque a contribuição da cultura negra na formação da sociedade brasileira;
+ºdestaque a contribuição da cultura negra na formação da sociedade brasileira;
 
-ofereça informações acessíveis sobre símbolos, artistas, tradições e lutas do povo negro;
+ºofereça informações acessíveis sobre símbolos, artistas, tradições e lutas do povo negro;
 
-estimule a reflexão sobre racismo estrutural, representatividade e identidade afro-brasileira;
+ºestimule a reflexão sobre racismo estrutural, representatividade e identidade afro-brasileira;
 
-funcione como recurso educativo e cultural para comunidade, escolas, grupos de estudo.
+ºfuncione como recurso educativo e cultural para comunidade, escolas, grupos de estudo.
 
 🔍 Conteúdo da Página Inicial
 
-Na página inicial (index.html) você encontrará:
+ºNa página inicial (index.html) você encontrará:
 
-introdução ao tema da consciência negra e sua importância histórica e social;
+ºintrodução ao tema da consciência negra e sua importância histórica e social;
 
-apresentação de conceitos fundamentais como identidade, pertença e resistência;
+ºapresentação de conceitos fundamentais como identidade, pertença e resistência;
 
-links ou seções para navegação (ex: galeria, referências, artistas, símbolos);
+ºlinks ou seções para navegação (ex: galeria, referências, artistas, símbolos);
 
-convite à reflexão sobre a necessidade de visibilidade e valorização da cultura negra.
+ºconvite à reflexão sobre a necessidade de visibilidade e valorização da cultura negra.
 
 🌍 Por que este projeto importa
 
